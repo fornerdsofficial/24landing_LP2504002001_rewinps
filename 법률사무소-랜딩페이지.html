@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WIN & PARTNERS - 법률사무소</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#C5A572',secondary:'#1F2937'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans KR', sans-serif;
+}
+.hero-section {
+background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://public.readdy.ai/ai/img_res/3e4f636a1731508488c05752aa8e31e6.jpg');
+background-size: cover;
+background-position: center;
+}
+.icon-box:hover {
+transform: scale(1.05);
+transition: all 0.3s ease;
+}
+.dropdown-menu {
+display: none;
+position: absolute;
+background-color: #1f2937;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+z-index: 1;
+border-radius: 8px;
+}
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+@media (max-width: 768px) {
+.mobile-menu {
+display: none;
+}
+.mobile-menu.active {
+display: flex;
+}
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header & Navigation -->
+<header id="header" class="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-80 backdrop-blur-md shadow-lg z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<!-- Logo -->
+<a href="index.html" class="flex items-center">
+<img src="img/logo.png" alt="WIN & PARTNERS 로고" class="h-12">
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-6">
+<a href="#hero" class="text-gray-300 hover:text-primary font-medium">홈</a>
+<a href="#about" class="text-gray-300 hover:text-primary font-medium">회사소개</a>
+<a href="#services" class="text-gray-300 hover:text-primary font-medium">법률서비스</a>
+<a href="#process" class="text-gray-300 hover:text-primary font-medium">진행절차</a>
+<a href="#testimonials" class="text-gray-300 hover:text-primary font-medium">성공사례</a>
+<div class="dropdown relative">
+<a href="#" class="text-gray-300 hover:text-primary font-medium flex items-center">
+법률정보
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</a>
+<div class="dropdown-menu mt-2">
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-primary">개인회생 안내</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-primary">개인파산 안내</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-primary">자주 묻는 질문</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-primary">법률용어 사전</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-primary">최신 법률정보</a>
+</div>
+</div>
+<a href="http://pf.kakao.com/_xoTVQG" class="text-gray-300 hover:text-primary font-medium">상담문의</a>
+</nav>
+<!-- CTA Button -->
+<a href="http://pf.kakao.com/_xoTVQG" class="hidden md:block bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">무료상담 신청</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-300">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="mobile-menu flex flex-col w-full bg-gray-900 bg-opacity-95 py-4 px-4 md:hidden">
+<a href="#hero" class="py-2 text-gray-300 hover:text-primary font-medium">홈</a>
+<a href="#about" class="py-2 text-gray-300 hover:text-primary font-medium">회사소개</a>
+<a href="#services" class="py-2 text-gray-300 hover:text-primary font-medium">법률서비스</a>
+<a href="#process" class="py-2 text-gray-300 hover:text-primary font-medium">진행절차</a>
+<a href="#testimonials" class="py-2 text-gray-300 hover:text-primary font-medium">성공사례</a>
+<div class="py-2">
+<button id="mobile-dropdown-button" class="flex items-center justify-between w-full text-gray-300 hover:text-primary font-medium">
+법률정보
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</button>
+<div id="mobile-dropdown" class="hidden pl-4 mt-2 space-y-2">
+<a href="#" class="block py-2 text-gray-300 hover:text-primary">개인회생 안내</a>
+<a href="#" class="block py-2 text-gray-300 hover:text-primary">개인파산 안내</a>
+<a href="#" class="block py-2 text-gray-300 hover:text-primary">자주 묻는 질문</a>
+<a href="#" class="block py-2 text-gray-300 hover:text-primary">법률용어 사전</a>
+<a href="#" class="block py-2 text-gray-300 hover:text-primary">최신 법률정보</a>
+</div>
+</div>
+<a href="http://pf.kakao.com/_xoTVQG" class="py-2 text-gray-300 hover:text-primary font-medium">상담문의</a>
+<a href="http://pf.kakao.com/_xoTVQG" class="mt-4 bg-primary text-white py-3 text-center !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">무료상담 신청</a>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="hero" class="hero-section h-screen flex items-center justify-center pt-16">
+<div class="container mx-auto px-4 text-center">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">개인회생·개인파산 전문 법률사무소</h1>
+<p class="text-white text-xl md:text-2xl mb-12 max-w-3xl mx-auto">채무 문제, 혼자 고민하지 마세요. 전문 변호사와 도산팀이이 도와드립니다</p>
+<!-- Icon Boxes -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+<!-- Icon Box 1 -->
+<a href="#services" class="icon-box bg-black bg-opacity-30 p-6 rounded-lg border border-primary border-opacity-30 hover:border-opacity-50 transition">
+<div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 text-primary">
+<i class="ri-scales-3-line text-3xl"></i>
+</div>
+<h3 class="text-white font-medium">개인회생</h3>
+</a>
+<!-- Icon Box 2 -->
+<a href="#services" class="icon-box bg-black bg-opacity-30 p-6 rounded-lg border border-primary border-opacity-30 hover:border-opacity-50 transition">
+<div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 text-primary">
+<i class="ri-file-shield-2-line text-3xl"></i>
+</div>
+<h3 class="text-white font-medium">개인파산</h3>
+</a>
+<!-- Icon Box 3 -->
+<a href="#services" class="icon-box bg-black bg-opacity-30 p-6 rounded-lg border border-primary border-opacity-30 hover:border-opacity-50 transition">
+<div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 text-primary">
+<i class="ri-hand-coin-line text-3xl"></i>
+</div>
+<h3 class="text-white font-medium">채무조정</h3>
+</a>
+<!-- Icon Box 4 -->
+<a href="http://pf.kakao.com/_xoTVQG" class="icon-box bg-black bg-opacity-30 p-6 rounded-lg border border-primary border-opacity-30 hover:border-opacity-50 transition">
+<div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 text-primary">
+<i class="ri-customer-service-2-line text-3xl"></i>
+</div>
+<h3 class="text-white font-medium">무료상담</h3>
+</a>
+<!-- Icon Box 5 -->
+<a href="#about" class="icon-box bg-black bg-opacity-30 p-6 rounded-lg border border-primary border-opacity-30 hover:border-opacity-50 transition">
+<div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 text-primary">
+<i class="ri-team-line text-3xl"></i>
+</div>
+<h3 class="text-white font-medium">전문변호사</h3>
+</a>
+</div>
+</div>
+</section>
+<!-- 진행절차 Section -->
+<section id="process" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">개인회생·개인파산 진행 과정</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">WIN & PARTNERS와 함께하는 체계적인 법률 서비스 진행 절차를 안내해 드립니다.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+<!-- 좌측: 절차 설명 이미지 -->
+<div class="features-image">
+<img  src="img/ceo3.png"alt="법률 상담 과정" class="rounded-lg shadow-xl mx-auto h-[600px] w-[500px] object-cover">
+</div>
+<!-- 우측: 4단계 절차 나열 -->
+<div class="space-y-8 gap-12">
+<!-- 1단계 -->
+<div class="flex items-start">
+<div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mr-6 flex-shrink-0">
+<span class="text-2xl font-bold">1</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-chat-3-line"></i>
+</div>
+무료 법률상담
+</h4>
+<p class="text-gray-600">전문 도산팀과의 무료 상담을 통해 고객님의 상황을 정확히 파악하고, 최적의 법률 해결책을 제시해 드립니다. 전화, 방문, 온라인 상담 모두 가능합니다.</p>
+</div>
+</div>
+<!-- 2단계 -->
+<div class="flex items-start">
+<div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mr-6 flex-shrink-0">
+<span class="text-2xl font-bold">2</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-file-list-3-line"></i>
+</div>
+서류 준비 및 제출
+</h4>
+<p class="text-gray-600">필요한 서류 목록을 안내해 드리며, 서류 준비 과정을 전문가가 직접접 도와드립니다. 복잡한 법률 서류 작성도 걱정하지 마세요.</p>
+</div>
+</div>
+<!-- 3단계 -->
+<div class="flex items-start">
+<div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mr-6 flex-shrink-0">
+<span class="text-2xl font-bold">3</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-government-line"></i>
+</div>
+법원 신청 및 심사
+</h4>
+<p class="text-gray-600">법원에 개인회생 또는 개인파산 신청서를 제출하고, 심사 과정을 전문적으로 대리합니다. 필요시 법원 출석도 변호사가 함께합니다.</p>
+</div>
+</div>
+<!-- 4단계 -->
+<div class="flex items-start">
+<div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mr-6 flex-shrink-0">
+<span class="text-2xl font-bold">4</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-award-line"></i>
+</div>
+인가 및 면책 결정
+</h4>
+<p class="text-gray-600">법원의 인가 결정 후, 변제 계획에 따라 채무를 상환하거나 면책 결정을 받아 채무에서 해방됩니다. 새로운 시작을 위한 모든 과정을 함께합니다.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA 버튼 -->
+<div class="text-center mt-16">
+<a href="http://pf.kakao.com/_xoTVQG" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition inline-block whitespace-nowrap">무료 상담 신청하기</a>
+</div>
+</div>
+</section>
+<!-- 법률서비스 Section -->
+<section id="services" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">주요 법률서비스 안내</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">WIN & PARTNERS는 다양한 법률 문제에 대한 전문적인 해결책을 제공합니다. 고객님의 상황에 맞는 최적의 서비스를 선택하세요.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- 서비스 1: 개인회생 -->
+<a href="#" class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] border border-gray-100">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-scales-3-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">개인회생</h3>
+<p class="text-gray-600 mb-4">과도한 채무로 어려움을 겪고 계신가요? 개인회생을 통해 채무를 조정하고 3~5년간 변제 후 나머지 채무를 면제받을 수 있습니다. 소득이 있는 분들에게 적합한 해결책입니다.</p>
+<div class="flex items-center text-primary font-medium">
+<span>자세히 알아보기</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</div>
+</a>
+<!-- 서비스 2: 개인파산 -->
+<a href="#" class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] border border-gray-100">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-file-shield-2-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">개인파산</h3>
+<p class="text-gray-600 mb-4">채무 상환이 불가능한 상황인가요? 개인파산을 통해 법원의 면책 결정을 받으면 모든 채무에서 해방될 수 있습니다. 소득이 없거나 최저생계비 이하의 소득자에게 적합합니다.</p>
+<div class="flex items-center text-primary font-medium">
+<span>자세히 알아보기</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</div>
+</a>
+<!-- 서비스 3: 채무조정 -->
+<a href="#" class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] border border-gray-100">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-hand-coin-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">채무조정</h3>
+<p class="text-gray-600 mb-4">채권자와의 협상을 통해 이자율 인하, 원금 감면, 분할 상환 등의 방법으로 채무를 조정합니다. 법적 절차 없이 채무 문제를 해결하고 싶은 분들에게 적합한 서비스입니다.</p>
+<div class="flex items-center text-primary font-medium">
+<span>자세히 알아보기</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</div>
+</a>
+<!-- 서비스 4: 워크아웃 -->
+<a href="#" class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] border border-gray-100">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-bank-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">워크아웃</h3>
+<p class="text-gray-600 mb-4">금융기관과의 협상을 통해 채무를 재조정하는 프로그램입니다. 이자율 인하, 상환 기간 연장 등을 통해 채무 부담을 줄이고 정상적인 경제 활동을 할 수 있도록 도와드립니다.</p>
+<div class="flex items-center text-primary font-medium">
+<span>자세히 알아보기</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</div>
+</a>
+<!-- 서비스 5: 재산압류 대응 -->
+<a href="#" class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] border border-gray-100">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-safe-2-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">재산압류 대응</h3>
+<p class="text-gray-600 mb-4">급여, 예금, 부동산 등의 재산에 대한 압류 위기에 처해 있나요? 법적 대응을 통해 압류를 방지하거나 최소화하는 전략을 제시해 드립니다.</p>
+<div class="flex items-center text-primary font-medium">
+<span>자세히 알아보기</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</div>
+</a>
+<!-- 서비스 6: 추심 대응 -->
+<a href="#" class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] border border-gray-100">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-shield-user-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">추심 대응</h3>
+<p class="text-gray-600 mb-4">불법 추심으로 고통받고 계신가요? 채권추심 관련 법률에 따라 적절한 대응 방법을 안내해 드리고, 불법 추심 행위에 대한 법적 대응을 도와드립니다.</p>
+<div class="flex items-center text-primary font-medium">
+<span>자세히 알아보기</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</div>
+</a>
+</div>
+<!-- CTA 버튼 -->
+<div class="text-center mt-16">
+<a href="http://pf.kakao.com/_xoTVQG" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition inline-block whitespace-nowrap">무료 법률상담 받기</a>
+</div>
+</div>
+</section>
+<!-- Call To Action Section -->
+<section id="call-to-action" class="py-20 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://public.readdy.ai/ai/img_res/6d02f277e71720b57f917d7a4ea2b4de.jpg');">
+<div class="container mx-auto px-4 text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">지금 바로 무료 법률상담을 받아보세요</h2>
+<p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">채무 문제로 고민하지 마세요. WIN & PARTNERS의 전문 도산팀 최적의 해결책을 제시해 드립니다.</p>
+<a href="http://pf.kakao.com/_xoTVQG" class="bg-primary text-white px-10 py-4 !rounded-button font-medium hover:bg-opacity-90 transition inline-block text-lg whitespace-nowrap">무료상담 신청하기</a>
+</div>
+</section>
+<!-- 자료실 Section -->
+<section id="portfolio" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">법률정보 자료실</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">채무 문제 해결에 도움이 되는 다양한 법률 정보와 자료를 제공합니다.</p>
+</div>
+<!-- 필터 버튼 -->
+<div class="flex flex-wrap justify-center mb-10 isotope-filters">
+<button class="filter-button active mx-2 mb-3 px-5 py-2 !rounded-full bg-primary text-white hover:bg-opacity-90 transition whitespace-nowrap" data-filter="*">전체</button>
+<button class="filter-button mx-2 mb-3 px-5 py-2 !rounded-full bg-white text-gray-700 border border-gray-200 hover:bg-gray-100 transition whitespace-nowrap" data-filter=".filter-recovery">개인회생</button>
+<button class="filter-button mx-2 mb-3 px-5 py-2 !rounded-full bg-white text-gray-700 border border-gray-200 hover:bg-gray-100 transition whitespace-nowrap" data-filter=".filter-bankruptcy">개인파산</button>
+<button class="filter-button mx-2 mb-3 px-5 py-2 !rounded-full bg-white text-gray-700 border border-gray-200 hover:bg-gray-100 transition whitespace-nowrap" data-filter=".filter-legal">법률정보</button>
+</div>
+<!-- 자료 아이템 그리드 -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 isotope-container">
+<!-- 자료 아이템 1 -->
+<div class="isotope-item filter-recovery bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/72a1099ef60d4deb40e9b142353f2b45.jpg" alt="개인회생 신청 자격" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute top-0 right-0 m-4 px-3 py-1 bg-primary text-white text-xs font-medium !rounded-full">개인회생</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">개인회생 신청 자격 및 조건</h3>
+<p class="text-gray-600 mb-4">개인회생을 신청하기 위한 자격 요건과 필요 조건에 대한 상세 안내입니다. 소득, 채무 규모, 신용 상태 등 고려해야 할 사항들을 확인하세요.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+자세히 보기
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- 자료 아이템 2 -->
+<div class="isotope-item filter-bankruptcy bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/6387a6dc62387d3b1a8fc5e368fe12e2.jpg" alt="개인파산 면책 조건" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute top-0 right-0 m-4 px-3 py-1 bg-primary text-white text-xs font-medium !rounded-full">개인파산</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">개인파산 면책 조건 안내</h3>
+<p class="text-gray-600 mb-4">개인파산 후 면책을 받기 위한 조건과 절차에 대한 상세 안내입니다. 면책 불허 사유와 주의사항에 대해 알아보세요.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+자세히 보기
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- 자료 아이템 3 -->
+<div class="isotope-item filter-legal bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/08524ec1bcf38888d6511439e7285dc7.jpg" alt="채무자 권리 보호" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute top-0 right-0 m-4 px-3 py-1 bg-primary text-white text-xs font-medium !rounded-full">법률정보</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">채무자 권리 보호 가이드</h3>
+<p class="text-gray-600 mb-4">채권추심 과정에서 채무자가 가지는 법적 권리와 보호 장치에 대한 안내입니다. 불법 추심 대응 방법도 함께 알아보세요.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+자세히 보기
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- 자료 아이템 4 -->
+<div class="isotope-item filter-recovery bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/3a8f1ecde8041012f1930c5eada6696d.jpg" alt="개인회생 변제계획" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute top-0 right-0 m-4 px-3 py-1 bg-primary text-white text-xs font-medium !rounded-full">개인회생</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">개인회생 변제계획 작성 방법</h3>
+<p class="text-gray-600 mb-4">개인회생 절차에서 가장 중요한 변제계획 작성 방법과 인가 가능성을 높이는 팁을 소개합니다.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+자세히 보기
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- 자료 아이템 5 -->
+<div class="isotope-item filter-bankruptcy bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/6bdcf3bbb5ad0516f0bcbf004c19b719.jpg" alt="파산 후 신용회복" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute top-0 right-0 m-4 px-3 py-1 bg-primary text-white text-xs font-medium !rounded-full">개인파산</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">파산 후 신용회복 방법</h3>
+<p class="text-gray-600 mb-4">개인파산 후 신용점수를 회복하고 정상적인 금융생활로 돌아가기 위한 단계별 가이드를 제공합니다.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+자세히 보기
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- 자료 아이템 6 -->
+<div class="isotope-item filter-legal bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/f8e8544c784f64b06093208e63dd4814.jpg" alt="법률용어 사전" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute top-0 right-0 m-4 px-3 py-1 bg-primary text-white text-xs font-medium !rounded-full">법률정보</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">채무 관련 법률용어 사전</h3>
+<p class="text-gray-600 mb-4">개인회생, 파산 절차에서 자주 사용되는 법률용어를 알기 쉽게 설명해 드립니다. 법률 문서를 이해하는 데 도움이 됩니다.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+자세히 보기
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- 더보기 버튼 -->
+<div class="text-center mt-12">
+<a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary font-medium !rounded-button hover:bg-primary hover:text-white transition whitespace-nowrap">
+더 많은 자료 보기
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- 실적/통계 Section -->
+<section id="stats" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- 좌측: 이미지 -->
+<div class="order-2 lg:order-1">
+<img src="img/about.jpg" alt="법률사무소 실적" class="rounded-lg shadow-xl w-full">
+</div>
+<!-- 우측: 텍스트 및 통계 -->
+<div class="order-1 lg:order-2">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">WIN & PARTNERS의 실적</h2>
+<p class="text-gray-600 mb-8">WIN & PARTNERS는 수많은 고객님들의 채무 문제를 성공적으로 해결해 왔습니다. 전문성과 경험을 바탕으로 최상의 법률 서비스를 제공합니다.</p>
+<!-- 통계 그리드 -->
+<div class="grid grid-cols-2 gap-8">
+<!-- 통계 1: 만족 고객 -->
+<div class="text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-user-smile-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-4xl font-bold text-primary mb-2 counter" data-target="1250">0</h3>
+<p class="text-gray-600 font-medium">만족 고객</p>
+</div>
+<!-- 통계 2: 성공 사례 -->
+<div class="text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-award-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-4xl font-bold text-primary mb-2 counter" data-target="950">0</h3>
+<p class="text-gray-600 font-medium">성공 사례</p>
+</div>
+<!-- 통계 3: 인가율 -->
+<div class="text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-percent-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-4xl font-bold text-primary mb-2 counter" data-target="95">0</h3>
+<p class="text-gray-600 font-medium">인가율 (%)</p>
+</div>
+<!-- 통계 4: 전문 인력 -->
+<div class="text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-team-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-4xl font-bold text-primary mb-2 counter" data-target="15">0</h3>
+<p class="text-gray-600 font-medium">전문 인력</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 성공사례 Section -->
+<section id="testimonials" class="py-20 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://public.readdy.ai/ai/img_res/589d9ec8aef75caeeb76a2f0cc8eb1da.jpg');">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">고객 성공사례</h2>
+<p class="text-xl text-gray-300 max-w-2xl mx-auto">WIN & PARTNERS와 함께 새로운 시작을 맞이한 고객님들의 생생한 후기입니다.</p>
+</div>
+<!-- 슬라이더 컨테이너 -->
+<div class="testimonial-slider relative">
+<!-- 슬라이더 내용 -->
+<div class="testimonial-slides overflow-hidden">
+<div class="testimonial-track flex transition-transform duration-500 ease-in-out">
+<!-- 후기 1 -->
+<div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-4">
+<div class="bg-white rounded-lg p-8 h-full">
+<div class="flex items-center mb-4">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<img src="https://public.readdy.ai/ai/img_res/3276ef7cd176518080540caf99f8d20e.jpg" alt="김민수" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="text-lg font-bold">김민수</h4>
+<p class="text-gray-600">45세, 회사원</p>
+<div class="flex text-yellow-400 mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"과도한 카드 빚으로 밤잠을 이루지 못했습니다. WIN & PARTNERS를 통해 개인회생을 진행했고, 원금의 약 70%를 감면받아 이제는 안정적으로 상환하고 있습니다. 전문적인 상담과 친절한 안내에 정말 감사드립니다."</p>
+</div>
+</div>
+<!-- 후기 2 -->
+<div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-4">
+<div class="bg-white rounded-lg p-8 h-full">
+<div class="flex items-center mb-4">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<img src="https://public.readdy.ai/ai/img_res/ae73676a216735f00f568f7cab8d8292.jpg" alt="이지연" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="text-lg font-bold">이지연</h4>
+<p class="text-gray-600">38세, 자영업자</p>
+<div class="flex text-yellow-400 mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"코로나로 가게가 어려워지면서 빚이 눈덩이처럼 불어났습니다. 개인파산을 통해 모든 채무에서 해방되어 새 출발할 수 있게 되었습니다. 변호사님의 세심한 조언과 지원이 큰 힘이 되었습니다."</p>
+</div>
+</div>
+<!-- 후기 3 -->
+<div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-4">
+<div class="bg-white rounded-lg p-8 h-full">
+<div class="flex items-center mb-4">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<img src="https://public.readdy.ai/ai/img_res/9fc109702ddf96946ef052dcc8bc5a50.jpg" alt="박준호" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="text-lg font-bold">박준호</h4>
+<p class="text-gray-600">52세, 프리랜서</p>
+<div class="flex text-yellow-400 mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"사업 실패로 감당하기 힘든 채무가 생겼습니다. WIN & PARTNERS의 도움으로 개인회생을 성공적으로 마치고 지금은 안정적인 생활을 하고 있습니다. 법적 절차가 복잡했지만 모든 과정을 친절하게 안내해주셔서 감사합니다."</p>
+</div>
+</div>
+<!-- 후기 4 -->
+<div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-4">
+<div class="bg-white rounded-lg p-8 h-full">
+<div class="flex items-center mb-4">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<img src="https://public.readdy.ai/ai/img_res/671862d161dbcff8fbf7aac80fbc20fa.jpg" alt="최영미" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="text-lg font-bold">최영미</h4>
+<p class="text-gray-600">47세, 사무직</p>
+<div class="flex text-yellow-400 mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"이혼 후 혼자 아이를 키우며 생긴 빚으로 고통받았습니다. WIN & PARTNERS를 만나 채무조정을 받고 경제적으로 안정을 찾았습니다. 항상 고객의 입장에서 생각해주시는 변호사님께 진심으로 감사드립니다."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 슬라이더 컨트롤 -->
+<div class="flex justify-center mt-8">
+<button id="prev-testimonial" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary mr-4 hover:bg-primary hover:text-white transition">
+<i class="ri-arrow-left-s-line text-2xl"></i>
+</button>
+<button id="next-testimonial" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition">
+<i class="ri-arrow-right-s-line text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 상담문의 Section -->
+<section id="contact" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">무료 법률상담 신청</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">채무 문제 해결을 위한 첫 걸음, WIN & PARTNERS가 함께합니다.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- 좌측: 연락처 정보 -->
+<div class="lg:col-span-1">
+<div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+<h3 class="text-2xl font-bold mb-6">연락처 정보</h3>
+<div class="space-y-6">
+<!-- 주소 -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-map-pin-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">사무실 위치</h4>
+<p class="text-gray-600">서울특별시 강남구 테헤란로 123<br>법무타워 8층</p>
+</div>
+</div>
+<!-- 전화번호 -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-phone-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">상담 전화</h4>
+<p class="text-gray-600">02-1234-5678</p>
+<p class="text-gray-600">010-9876-5432</p>
+</div>
+</div>
+<!-- 이메일 -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-mail-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">이메일</h4>
+<p class="text-gray-600">contact@winpartners.kr</p>
+</div>
+</div>
+<!-- 운영시간 -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-time-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">운영시간</h4>
+<p class="text-gray-600">평일: 오전 9시 - 오후 6시</p>
+<p class="text-gray-600">토요일: 오전 9시 - 오후 1시</p>
+<p class="text-gray-600">일요일 및 공휴일: 휴무</p>
+</div>
+</div>
+</div>
+<!-- 소셜 미디어 링크 -->
+<div class="mt-8">
+<h4 class="text-lg font-bold mb-4">소셜 미디어</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition">
+<i class="ri-kakao-talk-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition">
+<i class="ri-youtube-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition">
+<i class="ri-facebook-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- 우측: 상담 폼 -->
+<div class="lg:col-span-2">
+<div class="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+<form id="contactForm" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- 이름 -->
+<div>
+<label for="name" class="block text-gray-700 font-medium mb-2">이름 <span class="text-red-500">*</span></label>
+<input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="이름을 입력하세요" required>
+</div>
+<!-- 연락처 -->
+<div>
+<label for="phone" class="block text-gray-700 font-medium mb-2">연락처 <span class="text-red-500">*</span></label>
+<input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="연락 가능한 번호를 입력하세요" required>
+</div>
+</div>
+<!-- 이메일 -->
+<div>
+<label for="email" class="block text-gray-700 font-medium mb-2">이메일</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="이메일 주소를 입력하세요">
+</div>
+<!-- 상담 분야 -->
+<div>
+<label for="subject" class="block text-gray-700 font-medium mb-2">상담 분야 <span class="text-red-500">*</span></label>
+<div class="relative">
+<select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none pr-8" required>
+<option value="" disabled selected>상담 분야를 선택하세요</option>
+<option value="개인회생">개인회생</option>
+<option value="개인파산">개인파산</option>
+<option value="채무조정">채무조정</option>
+<option value="워크아웃">워크아웃</option>
+<option value="재산압류대응">재산압류 대응</option>
+<option value="추심대응">추심 대응</option>
+<option value="기타">기타</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-500"></i>
+</div>
+</div>
+</div>
+<!-- 상담 내용 -->
+<div>
+<label for="message" class="block text-gray-700 font-medium mb-2">상담 내용 <span class="text-red-500">*</span></label>
+<textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="상담 내용을 자세히 입력해 주세요" required></textarea>
+</div>
+<!-- 개인정보 동의 -->
+<div class="flex items-start">
+<div class="flex items-center h-5">
+<input id="privacy" name="privacy" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary" required>
+</div>
+<label for="privacy" class="ml-2 text-sm text-gray-600">
+개인정보 수집 및 이용에 동의합니다. <a href="#" class="text-primary hover:underline">개인정보처리방침</a> 보기
+</label>
+</div>
+<!-- 제출 버튼 -->
+<div>
+<button type="submit" class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">무료상담 신청하기</button>
+</div>
+</form>
+<!-- 메시지 표시 영역 -->
+<div id="formMessages" class="mt-6 hidden">
+<!-- 로딩 메시지 -->
+<div id="loadingMessage" class="hidden bg-blue-50 text-blue-700 p-4 rounded-lg flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-3">
+<i class="ri-loader-4-line animate-spin"></i>
+</div>
+<p>상담 신청 중입니다. 잠시만 기다려주세요...</p>
+</div>
+<!-- 성공 메시지 -->
+<div id="successMessage" class="hidden bg-green-50 text-green-700 p-4 rounded-lg flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-3">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<p>상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.</p>
+</div>
+<!-- 에러 메시지 -->
+<div id="errorMessage" class="hidden bg-red-50 text-red-700 p-4 rounded-lg flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-3">
+<i class="ri-error-warning-line"></i>
+</div>
+<p>상담 신청 중 오류가 발생했습니다. 다시 시도해주세요.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="footer" class="bg-gray-900 text-white pt-16 pb-6">
+<div class="container mx-auto px-4">
+<!-- Footer Top -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+<!-- 회사 정보 -->
+<div class="col-span-1 lg:col-span-1">
+<a href="index.html" class="flex items-center mb-6">
+<img src="img/logo.png" alt="WIN & PARTNERS 로고" class="h-12">
+</a>
+<p class="text-gray-400 mb-6">WIN & PARTNERS는 개인회생, 개인파산 전문 법률사무소으로 채무 문제로 어려움을 겪고 계신 분들에게 최적의 법률 솔루션을 제공합니다.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 text-primary rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-kakao-talk-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 text-primary rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 text-primary rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-youtube-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 text-primary rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-facebook-fill"></i>
+</a>
+</div>
+</div>
+<!-- 바로가기 링크 -->
+<div class="col-span-1">
+<h4 class="text-xl font-bold mb-6">바로가기</h4>
+<ul class="space-y-3">
+<li><a href="#hero" class="text-gray-400 hover:text-primary transition">홈</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-primary transition">회사소개</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition">법률서비스</a></li>
+<li><a href="#process" class="text-gray-400 hover:text-primary transition">진행절차</a></li>
+<li><a href="#testimonials" class="text-gray-400 hover:text-primary transition">성공사례</a></li>
+<li><a href="http://pf.kakao.com/_xoTVQG" class="text-gray-400 hover:text-primary transition">상담문의</a></li>
+</ul>
+</div>
+<!-- 법률서비스 -->
+<div class="col-span-1">
+<h4 class="text-xl font-bold mb-6">법률서비스</h4>
+<ul class="space-y-3">
+<li><a href="#services" class="text-gray-400 hover:text-primary transition">개인회생</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition">개인파산</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition">채무조정</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition">워크아웃</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition">재산압류 대응</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition">추심 대응</a></li>
+</ul>
+</div>
+<!-- 뉴스레터 구독 -->
+<div class="col-span-1 lg:col-span-1">
+<h4 class="text-xl font-bold mb-6">뉴스레터 구독</h4>
+<p class="text-gray-400 mb-4">최신 법률 정보와 유용한 팁을 받아보세요.</p>
+<form id="newsletterForm" class="flex flex-col space-y-4">
+<div class="flex">
+<input type="email" placeholder="이메일 주소" class="flex-grow px-4 py-2 rounded-l focus:outline-none text-gray-800">
+<button type="submit" class="bg-primary text-white px-4 py-2 rounded-r hover:bg-opacity-90 transition whitespace-nowrap">구독하기</button>
+</div>
+<p class="text-xs text-gray-500">구독 신청 시 <a href="#" class="text-primary hover:underline">개인정보처리방침</a>에 동의하게 됩니다.</p>
+</form>
+</div>
+</div>
+<!-- 구분선 -->
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<!-- 저작권 -->
+<p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 WIN & PARTNERS 법률사무소. All Rights Reserved.</p>
+<!-- 하단 링크 -->
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 text-sm hover:text-primary transition">이용약관</a>
+<a href="#" class="text-gray-500 text-sm hover:text-primary transition">개인정보처리방침</a>
+<a href="#" class="text-gray-500 text-sm hover:text-primary transition">법적고지</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+// Mobile Menu Toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', () => {
+mobileMenu.classList.toggle('active');
+});
+// Mobile Dropdown Toggle
+const mobileDropdownButton = document.getElementById('mobile-dropdown-button');
+const mobileDropdown = document.getElementById('mobile-dropdown');
+mobileDropdownButton.addEventListener('click', () => {
+mobileDropdown.classList.toggle('hidden');
+});
+// 자료실 필터 기능
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('.filter-button');
+const isotopItems = document.querySelectorAll('.isotope-item');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+// 활성화된 버튼 스타일 변경
+filterButtons.forEach(btn => {
+btn.classList.remove('active', 'bg-primary', 'text-white');
+btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+});
+this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+this.classList.add('active', 'bg-primary', 'text-white');
+const filterValue = this.getAttribute('data-filter');
+// 아이템 필터링
+isotopItems.forEach(item => {
+if (filterValue === '*') {
+item.style.display = 'block';
+} else if (item.classList.contains(filterValue.substring(1))) {
+item.style.display = 'block';
+} else {
+item.style.display = 'none';
+}
+});
+});
+});
+// 숫자 카운터 애니메이션
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // 애니메이션 속도 (낮을수록 빠름)
+counters.forEach(counter => {
+const updateCount = () => {
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+const increment = target / speed;
+if (count < target) {
+counter.innerText = Math.ceil(count + increment);
+setTimeout(updateCount, 1);
+} else {
+counter.innerText = target;
+}
+};
+updateCount();
+});
+// 성공사례 슬라이더
+const testimonialTrack = document.querySelector('.testimonial-track');
+const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+const prevButton = document.getElementById('prev-testimonial');
+const nextButton = document.getElementById('next-testimonial');
+let currentIndex = 0;
+let slideWidth;
+// 슬라이드 너비 계산 함수
+function calculateSlideWidth() {
+if (window.innerWidth >= 1024) {
+return 100 / 3; // 데스크탑: 3개씩
+} else if (window.innerWidth >= 768) {
+return 50; // 태블릿: 2개씩
+} else {
+return 100; // 모바일: 1개씩
+}
+}
+// 슬라이드 이동 함수
+function moveSlides() {
+slideWidth = calculateSlideWidth();
+testimonialTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+}
+// 초기 설정
+window.addEventListener('resize', moveSlides);
+moveSlides();
+// 이전 버튼 클릭
+prevButton.addEventListener('click', () => {
+if (currentIndex > 0) {
+currentIndex--;
+moveSlides();
+}
+});
+// 다음 버튼 클릭
+nextButton.addEventListener('click', () => {
+const maxIndex = testimonialSlides.length - (100 / slideWidth);
+if (currentIndex < maxIndex) {
+currentIndex++;
+moveSlides();
+}
+});
+// 자동 슬라이드 (5초마다)
+setInterval(() => {
+const maxIndex = testimonialSlides.length - (100 / slideWidth);
+if (currentIndex < maxIndex) {
+currentIndex++;
+} else {
+currentIndex = 0;
+}
+moveSlides();
+}, 5000);
+// 상담 폼 제출 처리
+const contactForm = document.getElementById('contactForm');
+const formMessages = document.getElementById('formMessages');
+const loadingMessage = document.getElementById('loadingMessage');
+const successMessage = document.getElementById('successMessage');
+const errorMessage = document.getElementById('errorMessage');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// 폼 유효성 검사
+const name = document.getElementById('name').value;
+const phone = document.getElementById('phone').value;
+const subject = document.getElementById('subject').value;
+const message = document.getElementById('message').value;
+const privacy = document.getElementById('privacy').checked;
+if (!name || !phone || !subject || !message || !privacy) {
+// 필수 필드가 비어있을 경우
+formMessages.classList.remove('hidden');
+errorMessage.classList.remove('hidden');
+successMessage.classList.add('hidden');
+loadingMessage.classList.add('hidden');
+return;
+}
+// 로딩 메시지 표시
+formMessages.classList.remove('hidden');
+loadingMessage.classList.remove('hidden');
+successMessage.classList.add('hidden');
+errorMessage.classList.add('hidden');
+// 폼 제출 시뮬레이션 (실제로는 서버에 데이터를 전송)
+setTimeout(() => {
+// 성공 메시지 표시
+loadingMessage.classList.add('hidden');
+successMessage.classList.remove('hidden');
+errorMessage.classList.add('hidden');
+// 폼 초기화
+contactForm.reset();
+}, 1500);
+});
+}
+// 뉴스레터 폼 제출 처리
+const newsletterForm = document.getElementById('newsletterForm');
+if (newsletterForm) {
+newsletterForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// 간단한 성공 메시지 표시
+const emailInput = this.querySelector('input[type="email"]');
+if (emailInput.value) {
+// 커스텀 알림 생성
+const alertDiv = document.createElement('div');
+alertDiv.className = 'fixed top-20 right-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-md z-50';
+alertDiv.innerHTML = `
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<p>뉴스레터 구독이 완료되었습니다!</p>
+</div>
+`;
+document.body.appendChild(alertDiv);
+// 3초 후 알림 제거
+setTimeout(() => {
+alertDiv.remove();
+}, 3000);
+// 폼 초기화
+this.reset();
+}
+});
+}
+// 스크롤 시 헤더 스타일 변경
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 100) {
+header.classList.add('shadow-lg');
+header.classList.add('bg-opacity-95');
+} else {
+header.classList.remove('shadow-lg');
+header.classList.add('bg-opacity-80');
+}
+});
+// 스무스 스크롤 구현
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+// 모바일 메뉴가 열려있으면 닫기
+if (mobileMenu.classList.contains('active')) {
+mobileMenu.classList.remove('active');
+}
+});
+});
+});
+</script>
+</body>
+</html>
